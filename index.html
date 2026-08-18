@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriVoice — Studio IA de Voix Africaines Authentiques</title>
+    <meta name="description" content="Générez des voix-off africaines authentiques grâce à l'intelligence artificielle. 19 pays, accents réalistes, studio HD. Accédez au Studio dès maintenant.">
+    <meta name="keywords" content="voix africaines, IA, text-to-speech, Afrique, voix-off, TTS, intelligence artificielle, voix synthétique">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AfriVoice — Studio IA de Voix Africaines Authentiques">
+    <meta property="og:description" content="Générez des voix-off africaines authentiques grâce à l'intelligence artificielle. 19 pays, accents réalistes, studio HD.">
+    <meta property="og:url" content="https://www.afrivoice.site">
+    <meta property="og:site_name" content="AfriVoice">
+    <meta property="og:image" content="https://www.afrivoice.site/logo512.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AfriVoice — Studio IA de Voix Africaines Authentiques">
+    <meta name="twitter:description" content="Générez des voix-off africaines authentiques grâce à l'IA. 19 pays, accents réalistes.">
+    
+    <meta name="theme-color" content="#050507">
+    <link rel="icon" type="image/png" href="https://www.afrivoice.site/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.afrivoice.site/logo192.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Noise Overlay -->
+    <div class="noise-overlay" aria-hidden="true"></div>
+    
+    <!-- Custom Cursor (Desktop) -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+
+    <!-- ============================================== -->
+    <!-- NAVIGATION -->
+    <!-- ============================================== -->
+    <nav class="nav" id="nav" role="navigation" aria-label="Navigation principale">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo" aria-label="AfriVoice - Accueil">
+                <div class="nav-logo-icon">
+                    <img src="https://www.afrivoice.site/logo192.png" alt="AfriVoice" width="32" height="32" style="border-radius:8px;">
+                </div>
+                <span class="nav-logo-text">AfriVoice</span>
+            </a>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#examples" class="nav-link">Exemples</a>
+                <a href="#features" class="nav-link">Fonctionnalités</a>
+                <a href="#testimonials" class="nav-link">Avis</a>
+                <a href="#pricing" class="nav-link">Tarifs</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="https://www.afrivoice.site" class="nav-cta magnetic-btn" id="nav-cta">
+                    <span>Commencer maintenant</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <button class="nav-mobile-toggle" id="nav-mobile-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="nav-mobile-menu" id="nav-mobile-menu">
+            <div class="nav-mobile-menu-inner">
+                <a href="#examples" class="nav-mobile-link">Exemples</a>
+                <a href="#features" class="nav-mobile-link">Fonctionnalités</a>
+                <a href="#testimonials" class="nav-mobile-link">Avis</a>
+                <a href="#pricing" class="nav-mobile-link">Tarifs</a>
+                <a href="#faq" class="nav-mobile-link">FAQ</a>
+                <a href="https://www.afrivoice.site" class="btn-primary nav-mobile-cta">Commencer maintenant →</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================== -->
+    <!-- HERO SECTION -->
+    <!-- ============================================== -->
+    <section class="hero" id="hero">
+        <!-- Background Effects -->
+        <div class="hero-grid-bg" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+        <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+        
+        <div class="container hero-content">
+            <!-- Badge -->
+            <div class="hero-badge reveal">
+                <span class="hero-badge-dot" aria-hidden="true"></span>
+                <span>Studio IA de Voix Africaines</span>
+            </div>
+            
+            <!-- Headline -->
+            <h1 class="hero-title reveal reveal-delay-1">
+                Donnez une voix<br>
+                <span class="accent">authentiquement africaine</span><br>
+                à vos contenus.
+            </h1>
+            
+            <!-- Subtitle -->
+            <p class="hero-subtitle reveal reveal-delay-2">
+                AfriVoice génère des voix-off IA avec les accents réels de 19 pays d'Afrique.
+                Podcasts, publicités, vidéos — en un clic, votre contenu parle à l'Afrique.
+            </p>
+            
+            <!-- CTA Group -->
+            <div class="hero-cta-group reveal reveal-delay-3">
+                <a href="https://www.afrivoice.site" class="btn-primary btn-lg magnetic-btn" id="hero-cta-primary">
+                    <span>Accéder au Studio</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="#demo" class="btn-secondary btn-lg magnetic-btn" id="hero-cta-secondary">
+                    <span>Voir la démo</span>
+                </a>
+            </div>
+            
+            <!-- Stats -->
+            <div class="hero-stats reveal reveal-delay-4">
+                <div class="hero-stat">
+                    <span class="hero-stat-number counter" data-target="19">0</span>
+                    <span class="hero-stat-label">Pays africains</span>
+                </div>
+                <div class="hero-stat-divider" aria-hidden="true"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number counter" data-target="50">0</span>
+                    <span class="hero-stat-label">Voix disponibles</span>
+                </div>
+                <div class="hero-stat-divider" aria-hidden="true"></div>
+                <div class="hero-stat">
+                    <span class="hero-stat-number">HD</span>
+                    <span class="hero-stat-label">Qualité studio</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="hero-scroll-indicator" aria-hidden="true">
+            <div class="hero-scroll-mouse">
+                <div class="hero-scroll-wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TRUST BAR -->
+    <!-- ============================================== -->
+    <section class="trust-bar" aria-label="Statistiques de confiance">
+        <div class="container">
+            <div class="trust-content reveal">
+                <p class="trust-text">
+                    Utilisé par <strong class="text-accent">des milliers</strong> de créateurs dans 
+                    <strong class="text-accent">19 pays</strong> d'Afrique — 
+                    Podcast · Radio · Publicité · Vidéo · E-learning
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- EXEMPLES DE VOIX UTILISATEURS (3 PAYS) -->
+    <!-- ============================================== -->
+    <section class="section section-examples" id="examples">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Créations de nos utilisateurs</span>
+                <h2 class="section-title">Ils ont créé ça avec <span class="text-accent">AfriVoice</span>.</h2>
+                <p class="section-subtitle">Écoutez des exemples réels de voix-off générées par les utilisateurs d'AfriVoice au Sénégal, au Gabon et en Côte d'Ivoire.</p>
+            </div>
+            
+            <div class="examples-grid">
+                <!-- Example 1 — Côte d'Ivoire -->
+                <div class="example-card reveal reveal-delay-1 tilt-card" data-voice-id="1" data-audio-src="voice/afrivoice_CI_1784718581181.wav">
+                    <div class="example-badge-overlay">
+                        <span class="example-tag tag-primary">PUBLICITÉ</span>
+                        <span class="example-tag tag-country">🇨🇮 Côte d'Ivoire</span>
+                    </div>
+                    <div class="example-user-info">
+                        <div class="example-user-avatar">
+                            <span>KM</span>
+                        </div>
+                        <div class="example-user-meta">
+                            <span class="example-user-name">Généré par @Kouamé_Media</span>
+                            <span class="example-voice-accent">Voix Nouchi / Accent Abidjan</span>
+                        </div>
+                    </div>
+                    <h3 class="example-title">Spot Radio — Orange Money Super Cash</h3>
+                    <p class="example-sample-text">« Voix-off générée pour une campagne publicitaire nationale avec accent ivoirien authentique. »</p>
+                    
+                    <div class="example-player-wrapper">
+                        <button class="example-play-btn" aria-label="Écouter la voix ivoirienne">
+                            <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        </button>
+                        <div class="example-waveform-container" id="example-waveform-1"></div>
+                        <span class="example-time">0:03</span>
+                    </div>
+                    <div class="example-footer-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <span>Voix IA générée par un utilisateur AfriVoice (CI)</span>
+                    </div>
+                </div>
+
+                <!-- Example 2 — Sénégal (Voix Homme) -->
+                <div class="example-card reveal reveal-delay-2 tilt-card" data-voice-id="2" data-audio-src="voice/afrivoice_SN_1786294133101.wav">
+                    <div class="example-badge-overlay">
+                        <span class="example-tag tag-primary">LIVRE AUDIO</span>
+                        <span class="example-tag tag-country">🇸🇳 Sénégal</span>
+                    </div>
+                    <div class="example-user-info">
+                        <div class="example-user-avatar avatar-purple">
+                            <span>FL</span>
+                        </div>
+                        <div class="example-user-meta">
+                            <span class="example-user-name">Généré par @Fallou_Voice</span>
+                            <span class="example-voice-accent">Voix Narrative / Accent Wolof Dakar</span>
+                        </div>
+                    </div>
+                    <h3 class="example-title">Livre Audio — L'Histoire du Royaume du Baol</h3>
+                    <p class="example-sample-text">« Narration immersive et conte littéraire généré avec une voix wolof naturelle et expressive. »</p>
+                    
+                    <div class="example-player-wrapper">
+                        <button class="example-play-btn" aria-label="Écouter la voix sénégalaise">
+                            <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        </button>
+                        <div class="example-waveform-container" id="example-waveform-2"></div>
+                        <span class="example-time">0:04</span>
+                    </div>
+                    <div class="example-footer-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <span>Voix IA générée par un utilisateur AfriVoice (SN)</span>
+                    </div>
+                </div>
+
+                <!-- Example 3 — Gabon (Voix Femme) -->
+                <div class="example-card reveal reveal-delay-3 tilt-card" data-voice-id="3" data-audio-src="voice/afrivoice_GABON_1786396277704.wav">
+                    <div class="example-badge-overlay">
+                        <span class="example-tag tag-primary">PODCAST</span>
+                        <span class="example-tag tag-country">🇬🇦 Gabon</span>
+                    </div>
+                    <div class="example-user-info">
+                        <div class="example-user-avatar avatar-amber">
+                            <span>SY</span>
+                        </div>
+                        <div class="example-user-meta">
+                            <span class="example-user-name">Généré par @Sylvie_Studio</span>
+                            <span class="example-voice-accent">Voix Institutionnelle / Accent Libreville</span>
+                        </div>
+                    </div>
+                    <h3 class="example-title">Documentaire — Au Cœur du Gabon</h3>
+                    <p class="example-sample-text">« Récit documentaire et institutionnel haute définition avec intonation gabonaise claire. »</p>
+                    
+                    <div class="example-player-wrapper">
+                        <button class="example-play-btn" aria-label="Écouter la voix gabonaise">
+                            <svg class="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                            <svg class="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                        </button>
+                        <div class="example-waveform-container" id="example-waveform-3"></div>
+                        <span class="example-time">0:07</span>
+                    </div>
+                    <div class="example-footer-tag">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <span>Voix IA générée par un utilisateur AfriVoice (GABON)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- HOW IT WORKS -->
+    <!-- ============================================== -->
+    <section class="section section-dark" id="how-it-works">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Comment ça marche</span>
+                <h2 class="section-title">Du texte à la voix africaine<br>en <span class="text-accent">3 étapes</span>.</h2>
+                <p class="section-subtitle">Un processus simple, rapide et puissant. AfriVoice transforme n'importe quel texte en voix-off professionnelle avec l'accent africain de votre choix.</p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card reveal reveal-delay-1 tilt-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                            <polyline points="10 9 9 9 8 9"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Écrivez votre texte</h3>
+                    <p class="step-description">Tapez ou collez votre texte dans le studio. Scripts, slogans, narrations — tout est possible.</p>
+                </div>
+                
+                <div class="step-connector" aria-hidden="true">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none" aria-hidden="true">
+                        <path d="M0 12h36M30 6l6 6-6 6" stroke="#D4FF00" stroke-width="1.5" opacity="0.4"/>
+                    </svg>
+                </div>
+                
+                <div class="step-card reveal reveal-delay-2 tilt-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Choisissez le pays & accent</h3>
+                    <p class="step-description">Sélectionnez parmi 19 pays d'Afrique. Chaque voix porte les nuances authentiques de sa région.</p>
+                </div>
+                
+                <div class="step-connector" aria-hidden="true">
+                    <svg width="40" height="24" viewBox="0 0 40 24" fill="none" aria-hidden="true">
+                        <path d="M0 12h36M30 6l6 6-6 6" stroke="#D4FF00" stroke-width="1.5" opacity="0.4"/>
+                    </svg>
+                </div>
+                
+                <div class="step-card reveal reveal-delay-3 tilt-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Générez & téléchargez</h3>
+                    <p class="step-description">L'IA génère votre voix en qualité studio HD. Téléchargez en WAV et utilisez immédiatement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- FEATURES -->
+    <!-- ============================================== -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Fonctionnalités</span>
+                <h2 class="section-title">Tout ce qu'il faut pour<br><span class="text-accent">donner voix</span> à l'Afrique.</h2>
+                <p class="section-subtitle">Des outils professionnels conçus pour les créateurs de contenu, agences et entreprises du continent.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card reveal reveal-delay-1 tilt-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" aria-hidden="true">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Voix africaines authentiques</h3>
+                    <p class="feature-description">Des voix IA conçues avec les inflexions, rythmes et tonalités propres à chaque région d'Afrique. Pas des voix génériques — de vraies voix du continent.</p>
+                </div>
+                
+                <div class="feature-card reveal reveal-delay-2 tilt-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" aria-hidden="true">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">19 pays, tous les accents</h3>
+                    <p class="feature-description">Du Gabon au Kenya, du Sénégal à l'Afrique du Sud — choisissez parmi une bibliothèque d'accents africains en constante évolution.</p>
+                </div>
+                
+                <div class="feature-card reveal reveal-delay-3 tilt-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" aria-hidden="true">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">IA de génération avancée</h3>
+                    <p class="feature-description">Moteur AI v2.5 avec humanisation phonétique, expressions locales et contrôle d'intensité d'accent pour des résultats ultra-réalistes.</p>
+                </div>
+                
+                <div class="feature-card reveal reveal-delay-4 tilt-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" aria-hidden="true">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Studio HD intégré</h3>
+                    <p class="feature-description">Qualité audio 24kHz PCM professionnelle. Mastering HD automatique et export WAV instantané. Prêt pour la radio et la TV.</p>
+                </div>
+                
+                <div class="feature-card reveal reveal-delay-5 tilt-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" aria-hidden="true">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" y1="19" x2="12" y2="23"/>
+                            <line x1="8" y1="23" x2="16" y2="23"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">3 variantes émotionnelles</h3>
+                    <p class="feature-description">Générez 3 variantes de voix simultanément avec des tonalités et émotions différentes. Choisissez celle qui correspond le mieux.</p>
+                </div>
+                
+                <div class="feature-card reveal reveal-delay-5 tilt-card">
+                    <div class="feature-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4FF00" stroke-width="1.5" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="8" rx="2"/>
+                            <rect x="2" y="14" width="20" height="8" rx="2"/>
+                            <line x1="6" y1="6" x2="6.01" y2="6"/>
+                            <line x1="6" y1="18" x2="6.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Accès multi-plateforme</h3>
+                    <p class="feature-description">Utilisez AfriVoice directement depuis votre navigateur, sur mobile ou desktop. Aucune installation requise, accès instantané.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ============================================== -->
+    <!-- APP SHOWCASE -->
+    <!-- ============================================== -->
+    <section class="section section-dark" id="showcase">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Application</span>
+                <h2 class="section-title">Un studio vocal<br><span class="text-accent">professionnel</span> dans votre poche.</h2>
+                <p class="section-subtitle">Installable sur mobile et desktop, AfriVoice est conçu pour les créateurs qui veulent produire rapidement du contenu vocal africain de qualité.</p>
+            </div>
+            
+            <div class="showcase-container reveal">
+                <div class="showcase-mockup">
+                    <div class="showcase-mockup-frame">
+                        <img src="assets/studio-mockup.jpg" alt="AfriVoice Studio — Interface de génération vocale IA" class="showcase-mockup-image" loading="lazy" width="900" height="506">
+                    </div>
+                </div>
+                
+                <!-- Floating feature cards -->
+                <div class="showcase-float-card showcase-float-1 reveal reveal-delay-1">
+                    <span class="showcase-float-icon">🌍</span>
+                    <span class="showcase-float-text">19 pays</span>
+                </div>
+                <div class="showcase-float-card showcase-float-2 reveal reveal-delay-2">
+                    <span class="showcase-float-icon">🎙️</span>
+                    <span class="showcase-float-text">Voix HD 24kHz</span>
+                </div>
+                <div class="showcase-float-card showcase-float-3 reveal reveal-delay-3">
+                    <span class="showcase-float-icon">⚡</span>
+                    <span class="showcase-float-text">Génération rapide</span>
+                </div>
+                <div class="showcase-float-card showcase-float-4 reveal reveal-delay-4">
+                    <span class="showcase-float-icon">📱</span>
+                    <span class="showcase-float-text">Multi-plateforme</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- TESTIMONIALS -->
+    <!-- ============================================== -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Témoignages</span>
+                <h2 class="section-title">Ils utilisent <span class="text-accent">AfriVoice</span><br>au quotidien.</h2>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal reveal-delay-1 tilt-card">
+                    <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+                    <blockquote class="testimonial-quote">
+                        "AfriVoice a transformé notre production de contenus. Les voix sont incroyablement naturelles et nos auditeurs au Cameroun reconnaissent immédiatement l'accent."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">JN</div>
+                        <div>
+                            <div class="testimonial-name">Jean-Marc N.</div>
+                            <div class="testimonial-role">Producteur Radio, Douala</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal reveal-delay-2 tilt-card">
+                    <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+                    <blockquote class="testimonial-quote">
+                        "En tant que créatrice TikTok, j'ai enfin une voix-off qui me ressemble. L'accent ivoirien est tellement réaliste, mes abonnés adorent."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">AK</div>
+                        <div>
+                            <div class="testimonial-name">Aminata K.</div>
+                            <div class="testimonial-role">Créatrice de contenu, Abidjan</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card reveal reveal-delay-3 tilt-card">
+                    <div class="testimonial-stars" aria-label="5 étoiles">★★★★★</div>
+                    <blockquote class="testimonial-quote">
+                        "Notre agence utilise AfriVoice pour toutes les campagnes publicitaires africaines. La qualité HD est au niveau des studios professionnels. Un gain de temps énorme."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar" aria-hidden="true">PO</div>
+                        <div>
+                            <div class="testimonial-name">Patrick O.</div>
+                            <div class="testimonial-role">Directeur Agence Pub, Lagos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- PRICING -->
+    <!-- ============================================== -->
+    <section class="section section-dark" id="pricing">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Tarifs</span>
+                <h2 class="section-title">Choisissez votre<br><span class="text-accent">forfait vocal</span>.</h2>
+                <p class="section-subtitle">Chaque forfait inclut un quota mensuel de minutes et des fonctionnalités exclusives adaptées à votre cadence de production.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- STARTER Plan -->
+                <div class="pricing-card reveal reveal-delay-1 tilt-card">
+                    <div class="pricing-name">STARTER</div>
+                    <div class="pricing-tagline">Pour démarrer la voix off africaine</div>
+                    <div class="pricing-price-wrapper">
+                        <span class="pricing-price">1 900 <span class="pricing-currency">FCFA</span></span>
+                        <span class="pricing-period">/ mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> 10 minutes / mois sécurisées</li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> 5 pays d'Afrique débloqués</li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Voix standards de base</li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Qualité audio standard MP3</li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Utilisation personnelle uniquement</li>
+                        <li class="pricing-feature disabled"><span class="cross" aria-hidden="true">✕</span> Pas d'Expressions Locales ni d'Humanisation IA</li>
+                    </ul>
+                    <a href="https://www.afrivoice.site" class="btn-secondary pricing-cta magnetic-btn">Sélectionner ce forfait</a>
+                </div>
+                
+                <!-- CREATOR Plan (Popular) -->
+                <div class="pricing-card pricing-card-popular reveal reveal-delay-2 tilt-card">
+                    <div class="pricing-badge">POPULAIRE</div>
+                    <div class="pricing-name">CREATOR</div>
+                    <div class="pricing-tagline">Créateurs de contenu & réseaux sociaux</div>
+                    <div class="pricing-price-wrapper">
+                        <span class="pricing-price">4 900 <span class="pricing-currency">FCFA</span></span>
+                        <span class="pricing-period">/ mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> 30 minutes / mois sécurisées</li>
+                        <li class="pricing-feature highlight"><span class="check" aria-hidden="true">✓</span> <strong>19 pays & tous les accents débloqués</strong></li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Expressions Locales Africaines incluses</li>
+                        <li class="pricing-feature highlight"><span class="check" aria-hidden="true">✓</span> <strong>✨ Humanisation Phonétique IA incluse</strong></li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Qualité audio Haute Définition MP3 + WAV</li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Utilisation commerciale autorisée</li>
+                    </ul>
+                    <a href="https://www.afrivoice.site" class="btn-primary pricing-cta magnetic-btn">Sélectionner ce forfait</a>
+                </div>
+                
+                <!-- PRO STUDIO HD Plan -->
+                <div class="pricing-card reveal reveal-delay-3 tilt-card">
+                    <div class="pricing-name">PRO — STUDIO HD</div>
+                    <div class="pricing-tagline">Studios, entreprises & publicités HD</div>
+                    <div class="pricing-price-wrapper">
+                        <span class="pricing-price">8 900 <span class="pricing-currency">FCFA</span></span>
+                        <span class="pricing-period">/ mois</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> 60 minutes / mois sécurisées</li>
+                        <li class="pricing-feature highlight"><span class="check" aria-hidden="true">✓</span> <strong>⚡ Accès illimité aux 19 pays & accents</strong></li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Qualité Studio HD 24kHz PCM</li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Expressions locales & Humanisation IA</li>
+                        <li class="pricing-feature"><span class="check" aria-hidden="true">✓</span> Support prioritaire par e-mail 24/7</li>
+                    </ul>
+                    <a href="https://www.afrivoice.site" class="btn-secondary pricing-cta magnetic-btn">Sélectionner ce forfait</a>
+                </div>
+            </div>
+            
+            <p class="pricing-note reveal">
+                💳 Paiement sécurisé via carte bancaire ou Mobile Money (MTN MoMo, Orange Money, Wave, Airtel)
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- FAQ SECTION (INSPIRATION IZIMELO) -->
+    <!-- ============================================== -->
+    <section class="section section-dark" id="faq">
+        <div class="container container-sm">
+            <div class="section-header reveal">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Questions <span class="text-accent">Fréquentes</span>.</h2>
+                <p class="section-subtitle">Tout ce que vous devez savoir pour créer des voix-off africaines d'exception avec AfriVoice.</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item reveal reveal-delay-1">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Comment sont générées les voix-off africaines sur AfriVoice ?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>AfriVoice utilise des modèles de synthèse vocale IA de dernière génération, spécifiquement entraînés sur la phonétique, les intonations et les accents régionaux de 19 pays d'Afrique (Côte d'Ivoire, Sénégal, Cameroun, Nigéria, Kenya, etc.) pour offrir une voix authentique et naturelle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal reveal-delay-2">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Puis-je utiliser les voix générées pour mes vidéos et publicités commerciales ?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Absolument ! Tous les fichiers audio générés avec les forfaits Creator et Pro incluent des droits d'exploitation commerciale complète (YouTube, TikTok, Radio, Télévision, Spots publicitaires, Podcasts).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal reveal-delay-3">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Quels sont les modes de paiement disponibles en Afrique ?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Nous acceptons les moyens de paiement locaux et internationaux les plus populaires : Mobile Money (MTN MoMo, Orange Money, Wave, Airtel Money) ainsi que les cartes bancaires Visa et Mastercard.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal reveal-delay-4">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Dans quel format puis-je exporter et télécharger mes fichiers audio ?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Vous pouvez télécharger vos pistes audio en haute qualité MP3 (320 kbps) ou en format professionnel non compressé WAV (24kHz Studio PCM), immédiatement utilisables dans tous vos logiciels de montage (CapCut, Premiere Pro, DaVinci, Audition).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item reveal reveal-delay-5">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Est-il possible d'ajuster l'intonation, le ton et les expressions locales ?</span>
+                        <div class="faq-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            <p>Oui ! Le Studio AfriVoice inclut l'option "Humanisation Phonétique IA" et permet d'intégrer des expressions locales (nouchi, argot urbain, intonations culturelles) pour adapter parfaitement la voix à votre public cible.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- FINAL CTA -->
+    <!-- ============================================== -->
+    <section class="cta-final" id="cta-final">
+        <div class="cta-final-bg" aria-hidden="true">
+            <div class="cta-final-orb cta-final-orb-1"></div>
+            <div class="cta-final-orb cta-final-orb-2"></div>
+        </div>
+        <div class="container cta-final-content">
+            <h2 class="cta-final-title reveal">
+                Votre contenu mérite<br>une voix qui parle<br><span class="text-accent">à l'Afrique</span>.
+            </h2>
+            <p class="cta-final-subtitle reveal reveal-delay-1">
+                Rejoignez les créateurs qui donnent vie à leurs idées avec les voix du continent.
+            </p>
+            <div class="reveal reveal-delay-2">
+                <a href="https://www.afrivoice.site" class="btn-primary btn-xl cta-final-btn magnetic-btn" id="cta-final-btn">
+                    <span>Accéder au Studio</span>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="cta-final-note reveal reveal-delay-3">Accès immédiat · Créez vos voix-off en quelques clics</p>
+        </div>
+    </section>
+
+    <!-- ============================================== -->
+    <!-- FOOTER -->
+    <!-- ============================================== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo" aria-label="AfriVoice">
+                        <img src="https://www.afrivoice.site/logo192.png" alt="AfriVoice" width="32" height="32" style="border-radius:8px;">
+                        <span>AfriVoice</span>
+                    </a>
+                    <p class="footer-tagline">Studio IA de Voix Africaines Authentiques.<br>Créé pour le Continent Africain.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Produit</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Fonctionnalités</a></li>
+                        <li><a href="#pricing">Tarifs</a></li>
+                        <li><a href="#demo">Démo</a></li>
+                        <li><a href="https://www.afrivoice.site">Studio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Accents</h4>
+                    <ul class="footer-links">
+                        <li><a href="#africa">🇬🇦 Gabon</a></li>
+                        <li><a href="#africa">🇨🇲 Cameroun</a></li>
+                        <li><a href="#africa">🇨🇮 Côte d'Ivoire</a></li>
+                        <li><a href="#africa">🇸🇳 Sénégal</a></li>
+                        <li><a href="#africa">+ 15 pays</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Ressources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.afrivoice.site">Connexion</a></li>
+                        <li><a href="https://www.afrivoice.site">Créer un compte</a></li>
+                        <li><a href="#pricing">Plans & abonnements</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 AfriVoice. Créé pour le Continent Africain.</p>
+                <div class="footer-payments">
+                    <span class="footer-payment-label">Paiement sécurisé</span>
+                    <span class="footer-payment-methods">Visa · Mastercard · MTN MoMo · Orange Money · Wave</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
